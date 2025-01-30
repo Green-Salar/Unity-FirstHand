@@ -24,8 +24,17 @@ public class SmokeParticleSystemController : MonoBehaviour
         ps = whiteSmoke;
         if(fracturedObj!=null)fracturedObj.SetActive(false);
         setRingStatic();
-
+        StartCoroutine(StartSmoke());
         
+    }
+    IEnumerator StartSmoke()
+    {
+        //prestart the smoke
+        ps.Play();
+        beginingExplosion.Play();
+        yield return new WaitForSeconds(.1f);
+        ps.Stop();
+        beginingExplosion.Stop();
     }
  
     public void IgnitionDetached()

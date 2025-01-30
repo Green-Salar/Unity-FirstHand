@@ -52,11 +52,12 @@ namespace Oculus.Interaction.Demo
         [SerializeField]
         [Range(0f, 1f)]
         private float _fireThresold = 0.9f;
+        
         [SerializeField]
         private float _triggerSpeed = 3f;
         [SerializeField]
         private AnimationCurve _strengthCurve = AnimationCurve.EaseInOut(0f, 0f, 1f, 1f);
-
+        /*
         [Header("Output")]
         [SerializeField, Tooltip("Masks the Raycast used to find objects to make wet")]
         private LayerMask _raycastLayerMask = ~0;
@@ -78,13 +79,11 @@ namespace Oculus.Interaction.Demo
         private Material _sprayStampMaterial = null;
         [SerializeField, Tooltip("When not null, will be set as the '_WetBumpMap' property on wet renderers")]
         private Texture _waterBumpOverride = null;
-
+        */
         [SerializeField]
         private UnityEvent WhenHolding;
         [SerializeField]
-        private UnityEvent WhenStream;
-        [SerializeField]
-        private UnityEvent WhenReleased;
+        private UnityEvent WhenReleased; 
         /*
         private static readonly int WET_MAP_PROPERTY = Shader.PropertyToID("_WetMap");
         private static readonly int STAMP_MULTIPLIER_PROPERTY = Shader.PropertyToID("_StampMultipler");
@@ -274,15 +273,33 @@ namespace Oculus.Interaction.Demo
         #endregion
 
         #region output
-       /*
-        /// <summary>
-        /// Cleans destroyed MeshBlits form the dictionary
-        /// </summary>
-        private void OnDestroy()
-        {
-            NonAlloc.CleanUpDestroyedBlits();
-        }
-        */
+        /*
+         /// <summary>
+         /// Cleans destroyed MeshBlits form the dictionary
+         /// </summary>
+         private void OnDestroy()
+         {
+             NonAlloc.CleanUpDestroyedBlits();
+         }
+
+         public float ComputeUseStrength(float strength)
+         {
+             float delta = Time.realtimeSinceStartup - _lastUseTime;
+             _lastUseTime = Time.realtimeSinceStartup;
+             if (strength > _dampedUseStrength)
+             {
+                 _dampedUseStrength = Mathf.Lerp(_dampedUseStrength, strength, _triggerSpeed * delta);
+             }
+             else
+             {
+                 _dampedUseStrength = strength;
+             }
+             float progress = _strengthCurve.Evaluate(_dampedUseStrength);
+
+             UpdateTriggerProgress(progress);
+             return progress;
+         }
+         */
         public void BeginUse()
         {
             _dampedUseStrength = 0f;
@@ -293,7 +310,6 @@ namespace Oculus.Interaction.Demo
         {
 
         }
-
         public float ComputeUseStrength(float strength)
         {
             float delta = Time.realtimeSinceStartup - _lastUseTime;
@@ -306,7 +322,9 @@ namespace Oculus.Interaction.Demo
             {
                 _dampedUseStrength = strength;
             }
+
             float progress = _strengthCurve.Evaluate(_dampedUseStrength);
+
             UpdateTriggerProgress(progress);
             return progress;
         }
