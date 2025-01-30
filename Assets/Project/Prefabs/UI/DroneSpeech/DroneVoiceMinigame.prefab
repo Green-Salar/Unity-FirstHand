@@ -2322,8 +2322,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   witRuntimeConfiguration:
-    witConfiguration: {fileID: 11400000, guid: 723638b04d07fcb4ea0afa28383746e9, type: 2}
-    useWebSockets: 0
+    witConfiguration: {fileID: 0}
     minKeepAliveVolume: 0.0005
     minKeepAliveTimeInSeconds: 2
     minTranscriptionKeepAliveTimeInSeconds: 1
@@ -2336,6 +2335,7 @@ MonoBehaviour:
     customTranscriptionProvider: {fileID: 0}
     alwaysRecord: 0
     preferredActivationOffset: -0.5
+    pubSubTopicId: 
   usePlatformServices: 0
   enableConsoleLogging: 0
   sendTranscriptionEventsForMessages: 0

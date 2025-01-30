@@ -69,6 +69,7 @@ MonoBehaviour:
     - {x: -0.08655167, y: -0.028756972, z: 0.38199356, w: -0.9196536}
     - {x: 0.047463123, y: -0.031716086, z: 0.24600263, w: -0.9675867}
     - {x: -0.013936071, y: 0.047158804, z: 0.24727225, w: -0.9676974}
+  _ghostProvider: {fileID: 0}
 --- !u!114 &712068131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,6 +210,7 @@ MonoBehaviour:
     - {x: -0.08823095, y: -0.023096723, z: 0.32169005, w: -0.94244224}
     - {x: 0.050242648, y: -0.027098836, z: 0.3361536, w: -0.9400756}
     - {x: -0.016880317, y: 0.0461869, z: 0.3077656, w: -0.9501906}
+  _ghostProvider: {fileID: 0}
 --- !u!114 &1321773531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,6 +298,7 @@ MonoBehaviour:
     - {x: -0.08932421, y: -0.01842126, z: 0.27164483, w: -0.95806634}
     - {x: 0.050966114, y: -0.025712509, z: 0.36177734, w: -0.93051517}
     - {x: -0.016270267, y: 0.04640527, z: 0.29522064, w: -0.95416284}
+  _ghostProvider: {fileID: 0}
 --- !u!114 &1513232936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -568,6 +571,7 @@ MonoBehaviour:
     - {x: -0.088067465, y: -0.02371245, z: 0.3282655, w: -0.9401721}
     - {x: 0.051076833, y: -0.025491076, z: 0.36580914, w: -0.92893755}
     - {x: -0.010461599, y: 0.04804922, z: 0.17607744, w: -0.9831473}
+  _ghostProvider: {fileID: 0}
 --- !u!114 &288407128502990987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6669,13 +6673,15 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 1
   m_EnableGPUInstancing: 1
   m_ApplyActiveColorSpace: 1
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
+  m_UseCustomVertexStreams: 1
   m_VertexStreams: 00030409
+  m_UseCustomTrailVertexStreams: 0
+  m_TrailVertexStreams: 00010304
   m_Mesh: {fileID: 6424249835199250112, guid: 46286ab2680036546ae87da30b6c47ba, type: 3}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}

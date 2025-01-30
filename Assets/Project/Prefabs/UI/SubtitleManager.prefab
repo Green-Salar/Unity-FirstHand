@@ -55,7 +55,6 @@ MonoBehaviour:
   _iconBorder: {fileID: 773762363131367540}
   _textBox: {fileID: 3138970862759200313}
   _uiCanvas: {fileID: 7193230194409673010}
-  _canvasGroup: {fileID: 0}
   _typingSpeed: 0.001
   _lookAwayDelay: 0.25
   _offset: {x: 0, y: 0.3, z: 0}

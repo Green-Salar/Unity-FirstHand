@@ -740,6 +740,7 @@ MonoBehaviour:
   Preset: {fileID: 11400000, guid: 831ad0032b49f1043ade80051e9b9672, type: 2}
   String: We did it! Power has been restored!
   Mute: 0
+  DurationOverride: -1
 --- !u!114 &-3085682231262056240
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3428,3 +3429,4 @@ MonoBehaviour:
   Preset: {fileID: 11400000, guid: 831ad0032b49f1043ade80051e9b9672, type: 2}
   String: Great job, come find me back at the Hub
   Mute: 0
+  DurationOverride: -1

@@ -440,8 +440,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hand: {fileID: 8688347580933921353}
   _handJointId: 9
-  _position: 1
-  _rotation: 0
   _localPositionOffset: {x: 0, y: 0, z: 0}
   _rotationOffset: {x: 0, y: 0, z: 0, w: 1}
 --- !u!114 &1107985333573883282

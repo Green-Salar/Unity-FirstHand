@@ -6790,6 +6790,10 @@ MonoBehaviour:
   VignetteAspectRatio: 1
   VignetteFalloffDegrees: 40
   VignetteColor: {r: 1, g: 0, b: 0, a: 0}
+  WriteStencil: 0
+  OpaqueStencilValue: 0
+  TransparentStencilValue: 0
+  WriteColor: 1
 --- !u!114 &6387840220682250451
 MonoBehaviour:
   m_ObjectHideFlags: 0
